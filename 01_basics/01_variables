@@ -1,0 +1,14 @@
+const accountID = 1234
+let accountEmail = "madhav@gmail.com"
+var accountPswd = "12345"
+accountCity = "Jind"
+let accountState; // undefined value
+
+// accountID = 2 (Changing in const keyword is not allowed)
+accountEmail = "md@md.in" //changed
+accountPswd = "23456"   // changed
+accountCity = "Delhi"  // changed
+
+/* Prefer not to use car because of issue of block scope and functional scope */
+console.log(accountID);
+console.table([accountID,accountEmail,accountPswd,accountCity,accountState]) // we can use console.table to print multi values in once
