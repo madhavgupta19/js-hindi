@@ -36,3 +36,28 @@ console.log(typeof anotherId); // symbol
 // console.log(typeof bigNumber); undefined
 // console.log(typeof outsideTemp); object
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+/////////////////////////////////////
+// stack memory(used in primitive datatypes)
+// a copy is passed in stack memory
+
+// heap memory(Non-primitive) in this original reference of variables is passed
+
+let myYoutubeName = "Madhav"
+let anotherName = myYoutubeName
+
+anotherName = "Maddy"
+console.log(myYoutubeName); // Madhav (original name is not changed)
+console.log(anotherName); // Maddy
+
+let userOne = {
+    email: "xyz@gmail.com",
+    upi: "xyz@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "asd@df.in"
+
+console.log(userOne.email); // asd@df.in (original gets changed in heap)
+console.log(userTwo.email); // asd@df.in
